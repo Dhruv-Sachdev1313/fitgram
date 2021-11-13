@@ -1,17 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:social_media_app_starter/screens/profile_screen.dart';
+import 'package:fitgram/screens/profile_screen.dart';
 
 import '../constant.dart';
-import '../constant.dart';
-import '../constant.dart';
-import '../constant.dart';
-import '../constant.dart';
-import '../constant.dart';
-import '../constant.dart';
-import '../constant.dart';
-import '../constant.dart';
-import '../constant.dart';
+
 
 class OnboardingScreen extends StatefulWidget {
   @override
