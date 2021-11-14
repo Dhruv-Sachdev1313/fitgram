@@ -13,8 +13,8 @@
 
 ## About
 
-*__This project tries to solve for Good Health & Wellbeing, this is a social media focused on fitness.As Instagram inspires use to look great, dress well, this app aims to inspire us to have a good fitness routine. The smart watch would track your daily progress and post it on your dashboard, and if you wish you can share that progress with your friends! On the Explore page you can view/like/commtent on your friend's fitness progress. You also have a profile page where you can see your recent activity.__*  
-*__One of the special feature in the app to inspire people is called "STREAK". This is a number which increases if you post daily, and would get back to zero if you fail to post your progress on someday.__* 
+*__This project tries to solve for Good Health & Wellbeing, this is a social media focused on fitness. As Instagram inspires us to look great, dress well, this app aims to inspire us to have a good fitness routine. The smartwatch would track your daily progress and post it on your dashboard, and if you wish you can share that progress with your friends! On the Explore page, you can view/like/comment on your friend's fitness progress. You also have a profile page where you can see your recent activity.__*  
+*__One of the special feature in the app to inspire people is called "STREAK". This is a number that increases if you post daily, and would get back to zero if you fail to post your progress someday.__* 
 
 <hr>
 
