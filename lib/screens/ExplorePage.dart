@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:fitgram/styleguide/text_style.dart';
+import 'package:fitgram/widgets/circle_indicator.dart';
 
 class ExplorePage extends StatefulWidget {
   @override
@@ -80,6 +81,118 @@ class _ExplorePageState extends State<ExplorePage> {
                     leading: CircleAvatar(
                               radius: 28,
                               backgroundImage:
+                                  AssetImage('assets/images/profile_pic.png'),
+                            ),
+                    title: const Text('Dhruv Sachdev'),
+                    subtitle: Text(
+                      'Just Now',
+                      style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      children: [
+                        CircularPercentIndicator(
+            radius: 110.0,
+            lineWidth: 12.0,
+            animation: true,
+            percent: 0.7,
+            center: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.all(5.0),
+                  child: Icon(
+                    Icons.run_circle_outlined,
+                    size: 20,
+                  ),
+                ),
+                Text(
+                  "8,970",
+                  style: TextStyle(
+                    fontFamily: fontFamily,
+                    fontSize: 20,
+                    letterSpacing: -2,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w400)
+                ),
+                Text(
+                  "Steps",
+                  style: TextStyle(
+                    fontFamily: fontFamily,
+                    fontSize: 20,
+                    letterSpacing: -2,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w100),
+                ),
+              ],
+            ),
+            circularStrokeCap: CircularStrokeCap.round,
+            progressColor: const Color(0xFF93C9C7),
+            backgroundColor: const Color(0xFFCDE8DD),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+            CircleIndicator(
+                text: "4.2\nMiles",
+                iconData: Icons.place_outlined,
+              ),
+              // SizedBox(
+              //   width: 80,
+              // ),
+              CircleIndicator(
+                  text: "6\nFloors", iconData: Icons.stairs_outlined),
+              //     SizedBox(
+              //   width: 80,
+              // ),
+              CircleIndicator(
+                text: "15\nMins",
+                iconData: Icons.place_outlined,
+              ),
+          ],)
+                      ],
+                    )
+                  ),
+                  ButtonBar(
+                    alignment: MainAxisAlignment.start,
+                    children: [
+                      IconButton(
+                        onPressed: () {
+                          // onIconTapped();
+                        },
+                        icon: Icon(
+                          Icons.favorite_border,
+                          color: Colors.black,
+                        ),
+                      ),
+                      IconButton(
+                        onPressed: () {
+                          // Perform some action
+                        },
+                        icon: Icon(
+                          Icons.comment_outlined,
+                          color: Colors.black,
+                        )
+                      ),
+                    ],
+                  ),
+                  // Image.asset('assets/card-sample-image.jpg'),
+                ],
+              ),
+            ),
+                  Card(
+              clipBehavior: Clip.antiAlias,
+              child: Column(
+                children: [
+                  ListTile(
+                    leading: CircleAvatar(
+                              radius: 28,
+                              backgroundImage:
                                   AssetImage('assets/images/friend_pic6.png'),
                             ),
                     title: const Text('Sean Holmes'),
@@ -90,10 +203,399 @@ class _ExplorePageState extends State<ExplorePage> {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(16.0),
-                    child: Text(
-                      'Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+                    child: Column(
+                      children: [
+                        CircularPercentIndicator(
+            radius: 110.0,
+            lineWidth: 12.0,
+            animation: true,
+            percent: 0.95,
+            center: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.all(5.0),
+                  child: Icon(
+                    Icons.run_circle_outlined,
+                    size: 20,
+                  ),
+                ),
+                Text(
+                  "9,601",
+                  style: TextStyle(
+                    fontFamily: fontFamily,
+                    fontSize: 20,
+                    letterSpacing: -2,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w400)
+                ),
+                Text(
+                  "Steps",
+                  style: TextStyle(
+                    fontFamily: fontFamily,
+                    fontSize: 20,
+                    letterSpacing: -2,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w100),
+                ),
+              ],
+            ),
+            circularStrokeCap: CircularStrokeCap.round,
+            progressColor: const Color(0xFF93C9C7),
+            backgroundColor: const Color(0xFFCDE8DD),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+            CircleIndicator(
+                text: "5.9\nMiles",
+                iconData: Icons.place_outlined,
+              ),
+              // SizedBox(
+              //   width: 80,
+              // ),
+              CircleIndicator(
+                  text: "8\nFloors", iconData: Icons.stairs_outlined),
+              //     SizedBox(
+              //   width: 80,
+              // ),
+              CircleIndicator(
+                text: "30\nMins",
+                iconData: Icons.place_outlined,
+              ),
+          ],)
+                      ],
+                    )
+                  ),
+                  ButtonBar(
+                    alignment: MainAxisAlignment.start,
+                    children: [
+                      IconButton(
+                        onPressed: () {
+                          onIconTapped();
+                        },
+                        icon: icon_one,
+                      ),
+                      IconButton(
+                        onPressed: () {
+                          // Perform some action
+                        },
+                        icon: Icon(
+                          Icons.comment_outlined,
+                          color: Colors.black,
+                        )
+                      ),
+                    ],
+                  ),
+                  // Image.asset('assets/card-sample-image.jpg'),
+                ],
+              ),
+            ),
+            Card(
+              clipBehavior: Clip.antiAlias,
+              child: Column(
+                children: [
+                  ListTile(
+                    leading: CircleAvatar(
+                              radius: 28,
+                              backgroundImage:
+                                  AssetImage('assets/images/friend_pic5.png'),
+                            ),
+                    title: const Text('Elizabeth Watson'),
+                    subtitle: Text(
+                      '12 hours ago',
                       style: TextStyle(color: Colors.black.withOpacity(0.6)),
                     ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      children: [
+                        CircularPercentIndicator(
+            radius: 110.0,
+            lineWidth: 12.0,
+            animation: true,
+            percent: 0.57,
+            center: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.all(5.0),
+                  child: Icon(
+                    Icons.run_circle_outlined,
+                    size: 20,
+                  ),
+                ),
+                Text(
+                  "5,702",
+                  style: TextStyle(
+                    fontFamily: fontFamily,
+                    fontSize: 20,
+                    letterSpacing: -2,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w400)
+                ),
+                Text(
+                  "Steps",
+                  style: TextStyle(
+                    fontFamily: fontFamily,
+                    fontSize: 20,
+                    letterSpacing: -2,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w100),
+                ),
+              ],
+            ),
+            circularStrokeCap: CircularStrokeCap.round,
+            progressColor: const Color(0xFF93C9C7),
+            backgroundColor: const Color(0xFFCDE8DD),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+            CircleIndicator(
+                text: "3.6\nMiles",
+                iconData: Icons.place_outlined,
+              ),
+              // SizedBox(
+              //   width: 80,
+              // ),
+              CircleIndicator(
+                  text: "5\nFloors", iconData: Icons.stairs_outlined),
+              //     SizedBox(
+              //   width: 80,
+              // ),
+              CircleIndicator(
+                text: "20\nMins",
+                iconData: Icons.place_outlined,
+              ),
+          ],)
+                      ],
+                    )
+                  ),
+                  ButtonBar(
+                    alignment: MainAxisAlignment.start,
+                    children: [
+                      IconButton(
+                        onPressed: () {
+                          onIconTapped();
+                        },
+                        icon: icon_one,
+                      ),
+                      IconButton(
+                        onPressed: () {
+                          // Perform some action
+                        },
+                        icon: Icon(
+                          Icons.comment_outlined,
+                          color: Colors.black,
+                        )
+                      ),
+                    ],
+                  ),
+                  // Image.asset('assets/card-sample-image.jpg'),
+                ],
+              ),
+            ),
+            Card(
+              clipBehavior: Clip.antiAlias,
+              child: Column(
+                children: [
+                  ListTile(
+                    leading: CircleAvatar(
+                              radius: 28,
+                              backgroundImage:
+                                  AssetImage('assets/images/friend_pic6.png'),
+                            ),
+                    title: const Text('Sean Holmes'),
+                    subtitle: Text(
+                      '2 hours ago',
+                      style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      children: [
+                        CircularPercentIndicator(
+            radius: 110.0,
+            lineWidth: 12.0,
+            animation: true,
+            percent: 0.7,
+            center: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.all(5.0),
+                  child: Icon(
+                    Icons.run_circle_outlined,
+                    size: 20,
+                  ),
+                ),
+                Text(
+                  "8,970",
+                  style: TextStyle(
+                    fontFamily: fontFamily,
+                    fontSize: 20,
+                    letterSpacing: -2,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w400)
+                ),
+                Text(
+                  "Steps",
+                  style: TextStyle(
+                    fontFamily: fontFamily,
+                    fontSize: 20,
+                    letterSpacing: -2,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w100),
+                ),
+              ],
+            ),
+            circularStrokeCap: CircularStrokeCap.round,
+            progressColor: const Color(0xFF93C9C7),
+            backgroundColor: const Color(0xFFCDE8DD),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+            CircleIndicator(
+                text: "4.2\nMiles",
+                iconData: Icons.place_outlined,
+              ),
+              // SizedBox(
+              //   width: 80,
+              // ),
+              CircleIndicator(
+                  text: "6\nFloors", iconData: Icons.stairs_outlined),
+              //     SizedBox(
+              //   width: 80,
+              // ),
+              CircleIndicator(
+                text: "15\nMins",
+                iconData: Icons.place_outlined,
+              ),
+          ],)
+                      ],
+                    )
+                  ),
+                  ButtonBar(
+                    alignment: MainAxisAlignment.start,
+                    children: [
+                      IconButton(
+                        onPressed: () {
+                          onIconTapped();
+                        },
+                        icon: icon_one,
+                      ),
+                      IconButton(
+                        onPressed: () {
+                          // Perform some action
+                        },
+                        icon: Icon(
+                          Icons.comment_outlined,
+                          color: Colors.black,
+                        )
+                      ),
+                    ],
+                  ),
+                  // Image.asset('assets/card-sample-image.jpg'),
+                ],
+              ),
+            ),
+            Card(
+              clipBehavior: Clip.antiAlias,
+              child: Column(
+                children: [
+                  ListTile(
+                    leading: CircleAvatar(
+                              radius: 28,
+                              backgroundImage:
+                                  AssetImage('assets/images/friend_pic6.png'),
+                            ),
+                    title: const Text('Sean Holmes'),
+                    subtitle: Text(
+                      '2 hours ago',
+                      style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      children: [
+                        CircularPercentIndicator(
+            radius: 110.0,
+            lineWidth: 12.0,
+            animation: true,
+            percent: 0.7,
+            center: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.all(5.0),
+                  child: Icon(
+                    Icons.run_circle_outlined,
+                    size: 20,
+                  ),
+                ),
+                Text(
+                  "8,970",
+                  style: TextStyle(
+                    fontFamily: fontFamily,
+                    fontSize: 20,
+                    letterSpacing: -2,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w400)
+                ),
+                Text(
+                  "Steps",
+                  style: TextStyle(
+                    fontFamily: fontFamily,
+                    fontSize: 20,
+                    letterSpacing: -2,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w100),
+                ),
+              ],
+            ),
+            circularStrokeCap: CircularStrokeCap.round,
+            progressColor: const Color(0xFF93C9C7),
+            backgroundColor: const Color(0xFFCDE8DD),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+            CircleIndicator(
+                text: "4.2\nMiles",
+                iconData: Icons.place_outlined,
+              ),
+              // SizedBox(
+              //   width: 80,
+              // ),
+              CircleIndicator(
+                  text: "6\nFloors", iconData: Icons.stairs_outlined),
+              //     SizedBox(
+              //   width: 80,
+              // ),
+              CircleIndicator(
+                text: "15\nMins",
+                iconData: Icons.place_outlined,
+              ),
+          ],)
+                      ],
+                    )
                   ),
                   ButtonBar(
                     alignment: MainAxisAlignment.start,
