@@ -1,6 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:fitgram/screens/Signin.dart';
 import 'package:flutter/material.dart';
 import 'package:fitgram/screens/profile_screen.dart';
+import 'package:fitgram/screens/DashboardScreen.dart';
+import 'package:fitgram/screens/Signup.dart';
 
 import '../constant.dart';
 
@@ -56,7 +59,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         children: [
           CarouselSlider(
             items: [0, 1, 2, 3].map((e) {
-              return Image.asset('assets/images/onboarding.png');
+              return Container(child:Image.asset('assets/images/gym1.jpg', fit: BoxFit.cover,));
             }).toList(),
             options: CarouselOptions(
               height: double.infinity,
@@ -87,10 +90,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Text(
-                    'Share Your\nHappy Moment',
+                    'Share Your\nFitness Journey!',
                     style: TextStyle(
                       fontSize: 46,
-                      color: kWhiteColor,
+                      color: Colors.white,
                       fontWeight: FontWeight.w500,
                     ),
                     textAlign: TextAlign.center,
@@ -99,9 +102,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     height: 20,
                   ),
                   Text(
-                    'Swipe to meet new friends, join group\nand live your best life.',
+                    'Meet new friends, get inspired \nand live your best life.',
                     style: TextStyle(
-                      color: kWhiteColor,
+                      color: Colors.white,
                       fontSize: 16,
                     ),
                     textAlign: TextAlign.center,
@@ -114,7 +117,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ProfileScreen(),
+                          builder: (context) => SignUp(),
                         ),
                       );
                     },
@@ -141,7 +144,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ProfileScreen(),
+                          builder: (context) => SignUp(),
                         ),
                       );
                     },

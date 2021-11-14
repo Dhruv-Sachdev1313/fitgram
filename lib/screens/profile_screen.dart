@@ -1,8 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/percent_indicator.dart';
+import 'package:fitgram/styleguide/text_style.dart';
 
 import '../constant.dart';
 
-class ProfileScreen extends StatelessWidget {
+class ProfileScreen extends StatefulWidget {
+  const ProfileScreen({Key key}) : super(key: key);
+
+  @override
+  _ProfileScreenState createState() => _ProfileScreenState();
+
+}
+class _ProfileScreenState extends State<ProfileScreen> {
+  int _selectedIndex = 2;
+   void onTapped(int value) {
+    setState(() {
+      _selectedIndex = value;
+    });
+    if (_selectedIndex == 1) {
+      Navigator.of(context).pushReplacementNamed('/explore');
+    } else if (_selectedIndex == 0) {
+      Navigator.of(context).pushReplacementNamed('/home');
+    } else {
+      Navigator.of(context).pushReplacementNamed('/profile');
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,20 +82,20 @@ class ProfileScreen extends StatelessWidget {
                                       height: 20,
                                     ),
                                     Text(
-                                      'Laura Rasmussen',
+                                      'Dhruv Sachdev',
                                       style: TextStyle(
                                         fontSize: 24,
-                                        color: kBlueColor,
+                                        color: Color(0xFF0A4049),
                                         fontWeight: FontWeight.w500,
                                       ),
                                     ),
-                                    Text('Malaysia'),
+                                    Text('India'),
                                     SizedBox(
                                       height: 20,
                                     ),
                                     MaterialButton(
                                       onPressed: () {},
-                                      color: kBlueColor,
+                                      color: Color(0xFF0A4049),
                                       minWidth: double.infinity,
                                       padding: EdgeInsets.symmetric(
                                         vertical: 16,
@@ -82,7 +104,7 @@ class ProfileScreen extends StatelessWidget {
                                         borderRadius: BorderRadius.circular(4),
                                       ),
                                       child: Text(
-                                        'FOLLOW',
+                                        'EDIT',
                                         style: TextStyle(
                                           fontSize: 16,
                                           color: kWhiteColor,
@@ -103,20 +125,20 @@ class ProfileScreen extends StatelessWidget {
                               Column(
                                 children: [
                                   Text(
-                                    '58',
+                                    '7',
                                     style: TextStyle(
                                       fontSize: 24,
-                                      color: kBlueColor,
+                                      color: Color(0xFF0A4049),
                                     ),
                                   ),
                                   SizedBox(
                                     height: 4,
                                   ),
-                                  Text(
-                                    'Posts',
-                                    style: TextStyle(
-                                      fontSize: 16,
-                                    ),
+                                  Icon(
+                                    Icons.local_fire_department
+                                    // style: TextStyle(
+                                    //   fontSize: 16,
+                                    // ),
                                   ),
                                 ],
                               ),
@@ -126,7 +148,7 @@ class ProfileScreen extends StatelessWidget {
                                     '1M',
                                     style: TextStyle(
                                       fontSize: 24,
-                                      color: kBlueColor,
+                                      color: Color(0xFF0A4049),
                                     ),
                                   ),
                                   SizedBox(
@@ -146,7 +168,7 @@ class ProfileScreen extends StatelessWidget {
                                     '425',
                                     style: TextStyle(
                                       fontSize: 24,
-                                      color: kBlueColor,
+                                      color: Color(0xFF0A4049),
                                     ),
                                   ),
                                   SizedBox(
@@ -176,7 +198,7 @@ class ProfileScreen extends StatelessWidget {
                             'Friends',
                             style: TextStyle(
                               fontSize: 20,
-                              color: kBlueColor,
+                              color: Color(0xFF0A4049),
                             ),
                           ),
                         ],
@@ -253,9 +275,9 @@ class ProfileScreen extends StatelessWidget {
                         vertical: 12,
                       ),
                       child: Text(
-                        'Photos',
+                        'Recent Activity',
                         style: TextStyle(
-                          color: kBlueColor,
+                          color: Color(0xFF0A4049),
                           fontSize: 20,
                         ),
                       ),
@@ -275,33 +297,114 @@ class ProfileScreen extends StatelessWidget {
                             padding: EdgeInsets.symmetric(horizontal: 8),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(20),
-                              child: Image.asset(
-                                'assets/images/photo1.png',
-                                height: 200,
-                                fit: BoxFit.fitHeight,
-                              ),
+                              child: Container(
+                                child:CircularPercentIndicator(
+                                  radius: 160.0,
+                                  lineWidth: 12.0,
+                                  animation: true,
+                                  percent: 0.7,
+                                  center: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      const Padding(
+                                        padding: EdgeInsets.all(5.0),
+                                        child: Icon(
+                                          Icons.run_circle_outlined,
+                                          size: 30,
+                                        ),
+                                      ),
+                                      Text(
+                                        "8,090",
+                                        style: kDashboardHeadingStyle.copyWith(
+                                            fontWeight: FontWeight.w400),
+                                      ),
+                                      Text(
+                                        "Steps",
+                                        style: kCardStyle,
+                                      ),
+                                    ],
+                                  ),
+                                  circularStrokeCap: CircularStrokeCap.round,
+                                  progressColor: const Color(0xFF93C9C7),
+                                  backgroundColor: const Color(0xFFCDE8DD),
+                                ),
+                              )
                             ),
                           ),
                           Padding(
                             padding: EdgeInsets.symmetric(horizontal: 8),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(20),
-                              child: Image.asset(
-                                'assets/images/photo2.png',
-                                height: 200,
-                                fit: BoxFit.fitHeight,
-                              ),
+                              child: Container(
+                                child:CircularPercentIndicator(
+                                  radius: 160.0,
+                                  lineWidth: 12.0,
+                                  animation: true,
+                                  percent: 0.5,
+                                  center: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      const Padding(
+                                        padding: EdgeInsets.all(5.0),
+                                        child: Icon(
+                                          Icons.run_circle_outlined,
+                                          size: 30,
+                                        ),
+                                      ),
+                                      Text(
+                                        "5,502",
+                                        style: kDashboardHeadingStyle.copyWith(
+                                            fontWeight: FontWeight.w400),
+                                      ),
+                                      Text(
+                                        "Steps",
+                                        style: kCardStyle,
+                                      ),
+                                    ],
+                                  ),
+                                  circularStrokeCap: CircularStrokeCap.round,
+                                  progressColor: const Color(0xFF93C9C7),
+                                  backgroundColor: const Color(0xFFCDE8DD),
+                                ),
+                              )
                             ),
                           ),
                           Padding(
                             padding: EdgeInsets.symmetric(horizontal: 8),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(20),
-                              child: Image.asset(
-                                'assets/images/photo3.png',
-                                height: 200,
-                                fit: BoxFit.fitHeight,
-                              ),
+                              child: Container(
+                                child:CircularPercentIndicator(
+                                  radius: 160.0,
+                                  lineWidth: 12.0,
+                                  animation: true,
+                                  percent: 0.6,
+                                  center: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      const Padding(
+                                        padding: EdgeInsets.all(5.0),
+                                        child: Icon(
+                                          Icons.run_circle_outlined,
+                                          size: 30,
+                                        ),
+                                      ),
+                                      Text(
+                                        "6,029",
+                                        style: kDashboardHeadingStyle.copyWith(
+                                            fontWeight: FontWeight.w400),
+                                      ),
+                                      Text(
+                                        "Steps",
+                                        style: kCardStyle,
+                                      ),
+                                    ],
+                                  ),
+                                  circularStrokeCap: CircularStrokeCap.round,
+                                  progressColor: const Color(0xFF93C9C7),
+                                  backgroundColor: const Color(0xFFCDE8DD),
+                                ),
+                              )
                             ),
                           ),
                           SizedBox(
@@ -319,6 +422,32 @@ class ProfileScreen extends StatelessWidget {
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        showSelectedLabels: true,
+        showUnselectedLabels: false,
+        currentIndex: _selectedIndex,
+        items: [
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+                size: 30.0,
+              ),
+              title: Text('Dashboard')),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.explore,
+                size: 30.0,
+              ),
+              title: Text('Explore')),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.person,
+                size: 30.0,
+              ),
+             title: Text('profile') ),
+        ],
+        onTap: onTapped,
       ),
     );
   }

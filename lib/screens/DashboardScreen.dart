@@ -1,3 +1,4 @@
+import 'package:fitgram/screens/ExplorePage.dart';
 import 'package:flutter/material.dart';
 import 'package:fitgram/styleguide/text_style.dart';
 import 'package:fitgram/widgets/card_detail.dart';
@@ -5,13 +6,65 @@ import 'package:fitgram/widgets/circle_indicator.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 // import 'package:firgram/lib/styleguide/text_style.dart';
 
-class DashBoardPage extends StatelessWidget {
+class DashBoardPage extends StatefulWidget {
   const DashBoardPage({Key key}) : super(key: key);
 
   @override
+  _DashBoardPageState createState() => _DashBoardPageState();
+
+}
+class _DashBoardPageState extends State<DashBoardPage> {
+  int _selectedIndex = 0;
+   void onTapped(int value) {
+    setState(() {
+      _selectedIndex = value;
+    });
+    if (_selectedIndex == 1) {
+      Navigator.of(context).pushReplacementNamed('/explore');
+    } else if (_selectedIndex == 0) {
+      Navigator.of(context).pushReplacementNamed('/home');
+    } else {
+      Navigator.of(context).pushReplacementNamed('/profile');
+    }
+  }
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        leading: IconButton(
+          icon: const Icon(
+            Icons.person, //logo will go here
+            color: Colors.black,
+          ),
+          onPressed: () {
+            // Go to profile page
+            Navigator.of(context).pushReplacementNamed('/onboard');
+          },
+        ),
+        title: Row(
+          children: [
+            SizedBox(
+              width: 80.0,
+            ),
+            // Image.asset(
+            //   'assets/icons/logo_red_small.png',
+            //   fit: BoxFit.contain,
+            //   height: 48,
+            // ),
+            Container(
+              padding: const EdgeInsets.all(0.0),
+              child: Text(
+                'Fitgram',
+                style: TextStyle(color: Colors.black),
+              ),
+            )
+          ],
+        )
+      ),
+      body: SingleChildScrollView(
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Text(
@@ -109,7 +162,51 @@ class DashBoardPage extends StatelessWidget {
           const SizedBox(
             height: 40,
           ),
+          Container(
+                height: 50,
+                width: 250,
+                decoration: BoxDecoration(
+                    color: Colors.green, borderRadius: BorderRadius.circular(20)),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(primary: Color(0xFFCDE8DD)),
+                  onPressed: () {
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (_) => ExplorePage()));
+                  },
+                  child: Text(
+                    'Post your progress!',
+                    style: TextStyle(color: Colors.green[700], fontSize: 15),
+                  ),
+            ),
+          ),
         ],
+      ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        showSelectedLabels: true,
+        showUnselectedLabels: false,
+        currentIndex: _selectedIndex,
+        items: [
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+                size: 30.0,
+              ),
+              title: Text('Dashboard')),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.explore,
+                size: 30.0,
+              ),
+              title: Text('Explore')),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.person,
+                size: 30.0,
+              ),
+             title: Text('profile') ),
+        ],
+        onTap: onTapped,
       ),
     );
   }
