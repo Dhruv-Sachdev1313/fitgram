@@ -30,7 +30,7 @@ Here's our demo video
 
 #### Setting up the environment
 
-- First Clone this Project on your local machine 
+- First Clone this Project on your local machine and make sure you have flutter installed on your computer. 
 - Open the folder in any ide of your choice, connect your phone/emulator and run the `main.dart` file.
 - If you are using terminal to run the project, use the following commands  
 `cd fitgram/`  
