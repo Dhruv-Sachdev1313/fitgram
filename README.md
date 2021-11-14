@@ -32,7 +32,7 @@ Here's our demo video
 
 - First Clone this Project on your local machine 
 - Open the folder in any ide of your choice, connect your phone/emulator and run the `main.dart` file.
-- If you are using terminal to run the following commands  
+- If you are using terminal to run the project, use the following commands  
 `cd fitgram/`  
  `flutter pub get`  
 *make sure you have a emulator running or a physical device connected to your computer*  
