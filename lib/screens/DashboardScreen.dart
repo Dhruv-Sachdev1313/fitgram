@@ -185,6 +185,7 @@ class _DashBoardPageState extends State<DashBoardPage> {
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: true,
         showUnselectedLabels: false,
+        selectedItemColor: Colors.green[700],
         currentIndex: _selectedIndex,
         items: [
           BottomNavigationBarItem(

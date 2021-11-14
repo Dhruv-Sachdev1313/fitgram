@@ -81,7 +81,7 @@ class _ExplorePageState extends State<ExplorePage> {
                     leading: CircleAvatar(
                               radius: 28,
                               backgroundImage:
-                                  AssetImage('assets/images/profile_pic.png'),
+                                  AssetImage('assets/images/friend_pic1.png'),
                             ),
                     title: const Text('Dhruv Sachdev'),
                     subtitle: Text(
@@ -306,7 +306,7 @@ class _ExplorePageState extends State<ExplorePage> {
                             ),
                     title: const Text('Elizabeth Watson'),
                     subtitle: Text(
-                      '12 hours ago',
+                      '7 hours ago',
                       style: TextStyle(color: Colors.black.withOpacity(0.6)),
                     ),
                   ),
@@ -386,7 +386,10 @@ class _ExplorePageState extends State<ExplorePage> {
                         onPressed: () {
                           onIconTapped();
                         },
-                        icon: icon_one,
+                        icon: Icon(
+                          Icons.favorite_border,
+                          color: Colors.black,
+                        ),
                       ),
                       IconButton(
                         onPressed: () {
@@ -411,11 +414,11 @@ class _ExplorePageState extends State<ExplorePage> {
                     leading: CircleAvatar(
                               radius: 28,
                               backgroundImage:
-                                  AssetImage('assets/images/friend_pic6.png'),
+                                  AssetImage('assets/images/friend_pic4.png'),
                             ),
-                    title: const Text('Sean Holmes'),
+                    title: const Text('Matt L.'),
                     subtitle: Text(
-                      '2 hours ago',
+                      '9 hours ago',
                       style: TextStyle(color: Colors.black.withOpacity(0.6)),
                     ),
                   ),
@@ -427,7 +430,7 @@ class _ExplorePageState extends State<ExplorePage> {
             radius: 110.0,
             lineWidth: 12.0,
             animation: true,
-            percent: 0.7,
+            percent: 0.68,
             center: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -439,7 +442,7 @@ class _ExplorePageState extends State<ExplorePage> {
                   ),
                 ),
                 Text(
-                  "8,970",
+                  "6,812",
                   style: TextStyle(
                     fontFamily: fontFamily,
                     fontSize: 20,
@@ -469,19 +472,19 @@ class _ExplorePageState extends State<ExplorePage> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
             CircleIndicator(
-                text: "4.2\nMiles",
+                text: "4.9\nMiles",
                 iconData: Icons.place_outlined,
               ),
               // SizedBox(
               //   width: 80,
               // ),
               CircleIndicator(
-                  text: "6\nFloors", iconData: Icons.stairs_outlined),
+                  text: "7\nFloors", iconData: Icons.stairs_outlined),
               //     SizedBox(
               //   width: 80,
               // ),
               CircleIndicator(
-                text: "15\nMins",
+                text: "20\nMins",
                 iconData: Icons.place_outlined,
               ),
           ],)
@@ -495,7 +498,10 @@ class _ExplorePageState extends State<ExplorePage> {
                         onPressed: () {
                           onIconTapped();
                         },
-                        icon: icon_one,
+                        icon: Icon(
+                          Icons.favorite_border,
+                          color: Colors.black,
+                        ),
                       ),
                       IconButton(
                         onPressed: () {
@@ -520,11 +526,11 @@ class _ExplorePageState extends State<ExplorePage> {
                     leading: CircleAvatar(
                               radius: 28,
                               backgroundImage:
-                                  AssetImage('assets/images/friend_pic6.png'),
+                                  AssetImage('assets/images/friend_pic3.png'),
                             ),
-                    title: const Text('Sean Holmes'),
+                    title: const Text('Rohan G.'),
                     subtitle: Text(
-                      '2 hours ago',
+                      '16 hours ago',
                       style: TextStyle(color: Colors.black.withOpacity(0.6)),
                     ),
                   ),
@@ -536,7 +542,7 @@ class _ExplorePageState extends State<ExplorePage> {
             radius: 110.0,
             lineWidth: 12.0,
             animation: true,
-            percent: 0.7,
+            percent: 0.92,
             center: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -548,7 +554,7 @@ class _ExplorePageState extends State<ExplorePage> {
                   ),
                 ),
                 Text(
-                  "8,970",
+                  "9,270",
                   style: TextStyle(
                     fontFamily: fontFamily,
                     fontSize: 20,
@@ -578,19 +584,19 @@ class _ExplorePageState extends State<ExplorePage> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
             CircleIndicator(
-                text: "4.2\nMiles",
+                text: "7.2\nMiles",
                 iconData: Icons.place_outlined,
               ),
               // SizedBox(
               //   width: 80,
               // ),
               CircleIndicator(
-                  text: "6\nFloors", iconData: Icons.stairs_outlined),
+                  text: "7\nFloors", iconData: Icons.stairs_outlined),
               //     SizedBox(
               //   width: 80,
               // ),
               CircleIndicator(
-                text: "15\nMins",
+                text: "40\nMins",
                 iconData: Icons.place_outlined,
               ),
           ],)
@@ -602,9 +608,12 @@ class _ExplorePageState extends State<ExplorePage> {
                     children: [
                       IconButton(
                         onPressed: () {
-                          onIconTapped();
+                          // onIconTapped();
                         },
-                        icon: icon_one,
+                        icon: Icon(
+                          Icons.favorite_border,
+                          color: Colors.black,
+                        ),
                       ),
                       IconButton(
                         onPressed: () {
@@ -631,6 +640,7 @@ class _ExplorePageState extends State<ExplorePage> {
        bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: true,
         showUnselectedLabels: false,
+        selectedItemColor: Colors.green[700],
         currentIndex: _selectedIndex,
         items: [
           BottomNavigationBarItem(

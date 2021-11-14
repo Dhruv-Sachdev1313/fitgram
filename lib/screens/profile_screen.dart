@@ -68,7 +68,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               CircleAvatar(
                                 radius: 48,
                                 backgroundImage:
-                                    AssetImage('assets/images/profile_pic.png'),
+                                    AssetImage('assets/images/friend_pic1.png'),
                               ),
                               SizedBox(
                                 width: 20,
@@ -217,7 +217,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             child: CircleAvatar(
                               radius: 28,
                               backgroundImage:
-                                  AssetImage('assets/images/friend_pic1.png'),
+                                  AssetImage('assets/images/profile_pic.png'),
                             ),
                           ),
                           Padding(
@@ -426,6 +426,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: true,
         showUnselectedLabels: false,
+        selectedItemColor: Colors.green[700],
         currentIndex: _selectedIndex,
         items: [
           BottomNavigationBarItem(
