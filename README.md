@@ -22,7 +22,7 @@
 
 Here's our demo video
 
-[![video](https://img.youtube.com/vi/mKNpqt8nPXE/0.jpg)](https://youtu.be/mKNpqt8nPXE)
+[![video](https://img.youtube.com/vi/uYWGzwzWTdg/0.jpg)](https://youtu.be/uYWGzwzWTdg)
 
 <hr>
 
