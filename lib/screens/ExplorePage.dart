@@ -83,7 +83,7 @@ class _ExplorePageState extends State<ExplorePage> {
                               backgroundImage:
                                   AssetImage('assets/images/friend_pic1.png'),
                             ),
-                    title: const Text('Dhruv Sachdev'),
+                    title: const Text('You'),
                     subtitle: Text(
                       'Just Now',
                       style: TextStyle(color: Colors.black.withOpacity(0.6)),
